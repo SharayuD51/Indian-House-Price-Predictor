@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>House Price Predictor</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🏠 HOUSE PRICE PREDICTOR</h1>
+        <p>Unlock the True Value of Your Home with Precision.</p>
+    </header>
+
+
+    <!-- Main Section -->
+    <main>
+
+        <div class="prediction-card">
+
+            <form method="POST">
+
+                <!-- Area -->
+                <label>Area (in sq ft)</label>
+
+                <input
+                    type="number"
+                    name="area"
+                    placeholder="1500"
+                    value="{{ area }}"
+                    min="1"
+                    required
+                >
+
+
+                <!-- Bedrooms -->
+                <label>Bedrooms</label>
+
+                <input
+                    type="number"
+                    name="bedrooms"
+                    placeholder="3"
+                    value="{{ bedrooms }}"
+                    min="1"
+                    required
+                >
+
+
+                <!-- Property Age -->
+                <label>Property Age (in years)</label>
+
+                <input
+                    type="number"
+                    name="age"
+                    placeholder="5"
+                    value="{{ age }}"
+                    min="0"
+                    required
+                >
+
+
+                <!-- Predict Button -->
+                <button type="submit">
+                    PREDICT HOUSE PRICE
+                </button>
+
+            </form>
+
+
+            <!-- Error Message -->
+            {% if error %}
+
+            <div class="error">
+                {{ error }}
+            </div>
+
+            {% endif %}
+
+
+            <!-- Prediction Result -->
+            {% if prediction is not none %}
+
+            <div class="result">
+
+                <p><strong>Prediction Details</strong></p>
+
+                <div class="details">
+
+                    <p>
+                        <strong>Area:</strong>
+                        {{ area }} sq.ft
+                    </p>
+
+                    <p>
+                        <strong>Bedrooms:</strong>
+                        {{ bedrooms }}
+                    </p>
+
+                    <p>
+                        <strong>Property Age:</strong>
+                        {{ age }} years
+                    </p>
+
+                </div>
+
+                <hr>
+
+                <p>Predicted House Price</p>
+
+                <h2>₹ {{ prediction }} Lakhs</h2>
+
+            </div>
+
+            {% endif %}
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            About Us &nbsp;&nbsp;&nbsp;
+            Contact &nbsp;&nbsp;&nbsp;
+            Privacy Policy
+        </p>
+
+        <p>
+            © 2026 House Price Predictor
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
