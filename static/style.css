@@ -1,0 +1,220 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            120deg,
+            #ffffff,
+            #f8f6f2
+        );
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 35px 20px 20px;
+}
+
+header h1 {
+    color: #4d0b28;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin-top: 5px;
+    color: #555;
+    font-size: 14px;
+}
+
+
+/* Main */
+
+main {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* Card */
+
+.prediction-card {
+    width: 390px;
+
+    background: white;
+
+    padding: 28px 20px;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+
+/* Labels */
+
+label {
+    display: block;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin-bottom: 6px;
+
+    color: #222;
+}
+
+
+/* Inputs */
+
+input {
+    width: 100%;
+
+    height: 42px;
+
+    margin-bottom: 14px;
+
+    padding: 10px;
+
+    font-size: 14px;
+
+    border: 2px solid #351022;
+
+    border-radius: 5px;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #8b1e4b;
+}
+
+
+/* Button */
+
+button {
+    width: 100%;
+
+    height: 42px;
+
+    margin-top: 2px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #071d3a,
+            #650b35
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+
+/* Result */
+
+.result {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: #f7f4ef;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    font-size: 21px;
+
+    font-weight: bold;
+
+    color: #111;
+}
+
+
+/* Footer */
+
+footer {
+    background:
+        linear-gradient(
+            90deg,
+            #500927,
+            #071d3a
+        );
+
+    color: white;
+
+    text-align: center;
+
+    padding: 18px;
+
+    font-size: 13px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    .prediction-card {
+        width: 95%;
+    }
+
+}
+.error {
+    margin-top: 15px;
+    padding: 12px;
+    text-align: center;
+
+    background: #ffeaea;
+    color: #a00000;
+
+    border: 1px solid #e0aaaa;
+    border-radius: 5px;
+
+    font-weight: bold;
+}
